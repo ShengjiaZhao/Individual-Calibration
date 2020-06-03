@@ -25,7 +25,7 @@ while True:   # Run as many times as possible to make plots with error bars
     dataset = CrimeDataset(device=device)
 
     # Create logging directory and create tensorboard and text loggers
-    log_dir = 'log2/coeff=%.2f-kl=%.2f-recalib=%r-%d-run=%d/' % (args.coeff, args.klcoeff, args.recalibrate, args.group_index, args.run)
+    log_dir = 'log/coeff=%.2f-recalib=%r-%d-run=%d/' % (args.coeff, args.recalibrate, args.group_index, args.run)
     if os.path.isdir(log_dir):
         shutil.rmtree(log_dir)
     writer = SummaryWriter(log_dir)

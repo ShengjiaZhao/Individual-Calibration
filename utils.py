@@ -1,4 +1,3 @@
-from datasets import *
 import torch
 import io
 import PIL.Image
